@@ -12,5 +12,10 @@ const api = axios.create({
 })
 
 export const getTrending = () => api.get('/trending/movie/day')
-export const getMovieDetails = (id) => api.get(`/movie/${id}`)
+export const getTopRated = () => api.get('/movie/top_rated')
+export const getMovieDetails = (id) => api.get(`/movie/${id}`);
 export const searchMovies = (query) => api.get('/search/movie', { params: { query } })
+export const getUpcoming = () => api.get('/movie/upcoming')
+export const getPopular = () => api.get('/movie/popular')
+export const getMovieCredits = (id) => api.get(`/movie/${id}/credits`);
+export const getMovieVideos = (id) => api.get(`/movie/${id}/videos`);

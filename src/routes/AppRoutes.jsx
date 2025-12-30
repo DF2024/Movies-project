@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
-// import MovieDetails from '../pages/MovieDetails'
-// import SearchMovies from '../pages/SearchResults'
+import MovieDetails from '../pages/MovieDetails'
 import Navbar from '../layouts/Navbar'
 
 const AppRoutes = () => {
@@ -9,8 +8,7 @@ const AppRoutes = () => {
         <Routes>
             <Route element={<Navbar/>}>
                 <Route path='/' element={<Home/>}/>
-                {/* <Route path='/details' element={<MovieDetails/>}/>
-                <Route path='/search' element={<SearchMovies/>}/> */}
+                <Route path='/movie/:id' element={<MovieDetails/>}/>
             </Route>
         </Routes>
     )

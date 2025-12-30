@@ -16,7 +16,7 @@ Axios / Fetch API – Consumo de la API de TMDB
 
 React Router DOM – Navegación entre páginas
 
-CSS / TailwindCSS (si aplica)
+CSS / TailwindCSS
 
 TMDB API – Fuente de datos de películas
 

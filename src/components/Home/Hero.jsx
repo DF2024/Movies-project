@@ -4,14 +4,14 @@ const Hero = ({ movie }) => {
     console.log("URL de Pósters:", import.meta.env.VITE_POSTER_BASE_URL);
     return(
         <div className="relative h-[60vh] md:h-[80vh] w-full">
-            {/* Imagen de fondo con degradado */}
+
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
             <img 
                 src={`${IMAGE_BASE_URL}${movie.backdrop_path}`} 
                 alt={movie.title}
                 className="w-full h-full object-cover"
             />
-            {/* Info de la película */}
+        
             <div className="absolute bottom-10 left-10 z-20 max-w-2xl">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">{movie.title}</h1>
                 <p className="text-lg text-gray-300 line-clamp-3">{movie.overview}</p>

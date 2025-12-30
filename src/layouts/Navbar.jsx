@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  // Estado para controlar el menú móvil
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,16 +12,16 @@ const Navbar = () => {
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             
-            {/* Botón Menú Móvil */}
+
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <button
                 type="button"
-                onClick={() => setIsOpen(!isOpen)} // Alternar estado
+                onClick={() => setIsOpen(!isOpen)} 
                 className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-none"
               >
                 <span className="sr-only">Open main menu</span>
                 
-                {/* Icono Hamburguesa (se oculta si está abierto) */}
+          
                 <svg
                   className={`${isOpen ? 'hidden' : 'block'} size-6`}
                   fill="none"
@@ -32,7 +32,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
 
-                {/* Icono X (se muestra si está abierto) */}
+
                 <svg
                   className={`${isOpen ? 'block' : 'hidden'} size-6`}
                   fill="none"
@@ -45,7 +45,7 @@ const Navbar = () => {
               </button>
             </div>
 
-            {/* Logo y Links Desktop */}
+
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex shrink-0 items-center">
                 <Link to='/'>                
@@ -57,7 +57,6 @@ const Navbar = () => {
                 </Link>
               </div>
 
-              {/* Buscador (Se oculta en móviles muy pequeños o se ajusta) */}
               <div className="hidden md:block flex-1 max-w-md mx-auto">
                 <div className="relative">
                   <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -76,7 +75,6 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Links Desktop */}
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
                   <a href="#" className="rounded-md bg-neutral-800 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
@@ -87,10 +85,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Menú Móvil (Desplegable) */}
+
         <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden bg-neutral-900 border-t border-white/10`}>
           <div className="space-y-1 px-2 pt-2 pb-3">
-            {/* Buscador en Móvil */}
+
             <div className="px-3 mb-3">
                 <input
                     type="search"

@@ -8,7 +8,7 @@ const MovieRow = ({ title, movies }) => {
                 {title}
             </h2>
             
-            {/* Contenedor con scroll horizontal */}
+
             <div className="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
                 {movies.map((movie) => (
                     <div key={movie.id} className="min-w-[160px] md:min-w-[200px] bg-neutral-900 rounded-lg overflow-hidden hover:scale-105 transition duration-300 cursor-pointer shadow-lg">

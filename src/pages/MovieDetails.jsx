@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieDetails, getMovieCredits, getMovieVideos } from '../services/tmdbApi';
 
-// Importamos los nuevos sub-componentes
+
 import MovieHeader from '../components/Details/MovieHeader'
 import MovieMedia from '../components/Details/MovieMedia';
 import MovieCast from '../components/Details/MovieCast';
@@ -44,7 +44,7 @@ const MovieDetails = () => {
     return (
         <div className="bg-[#121212] min-h-screen text-white pb-20">
             <div className="container mx-auto px-4">
-                {/* Dividimos la UI en secciones independientes */}
+     
                 <MovieHeader movie={movie} />
                 <MovieMedia movie={movie} trailer={trailer} />
                 
@@ -54,7 +54,7 @@ const MovieDetails = () => {
                         <MovieCast cast={cast} />
                     </div>
                     
-                    {/* Sidebar con detalles técnicos */}
+
                     <div className="bg-[#1f1f1f] p-6 rounded-lg h-fit">
                         <h3 className="text-amber-400 font-bold mb-4 uppercase text-xs">Detalles adicionales</h3>
                         <p className="text-sm text-gray-400">Presupuesto</p>
